@@ -1,0 +1,21 @@
+---
+hosts: all
+tasks:
+  - name: Ansible create directory structure for niagara installation
+    include_vars:
+      file: ../vars/main.yml
+      name: main_vars
+    file:
+      path: "{{ item.dest }}"
+      mode: "{{ item.mode }}"
+      state: directory
+    with_items:
+      - { dest: '{{ niagara_base_dir }}', mode: ''}
+      - { dest: '{{ niagara_jre_dir }}', mode: ''}
+      - { dest: '{{ niagara_bin_dir }}', mode: ''}
+      - { dest: '{{ niagara_cleanDist_dir }}', mode: ''}
+      - { dest: '{{ niagara_defaults_dir }}', mode: ''}
+      - { dest: '{{}}', mode: ''}
+      - { dest: '{{}}', mode: ''}
+      - { dest: '{{}}', mode: ''}
+      - { dest: '{{}}', mode: ''}

@@ -1,0 +1,5 @@
+---
+niagara_base_dir: /opt/Niagara
+niagara_version_dir: /SomeDir
+niagara_jre_dir: {{niagara_base_dir}}/{{niagara_version_dir}}/jre
+niagara_bin_dir: {{niagara_base_dir}}/{{niagara_version_dir}}/bin
